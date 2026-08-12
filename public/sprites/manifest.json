@@ -1,0 +1,192 @@
+{
+  "name": "Pack 0 \u2014 Hub Proof",
+  "pixel_grid": 16,
+  "terrain_mode": "RGB opaque",
+  "prop_mode": "RGBA transparent",
+  "campfire": {
+    "file": "hub/campfire.png",
+    "frame_size": [
+      24,
+      24
+    ],
+    "frames": 4
+  },
+  "files": [
+    {
+      "path": "hub/campfire.png",
+      "size": [
+        96,
+        24
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "hub/lantern_post.png",
+      "size": [
+        16,
+        32
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "hub/signpost_three_way.png",
+      "size": [
+        48,
+        48
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "nature/bush_a.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "nature/bush_b.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "nature/deciduous_tree_a.png",
+      "size": [
+        32,
+        48
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "nature/deciduous_tree_b.png",
+      "size": [
+        32,
+        48
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "nature/flower_a.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "nature/flower_b.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "nature/rock_a.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "nature/rock_b.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "terrain/center/dirt_path.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "terrain/center/grass_center_a.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "terrain/center/grass_center_b.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "terrain/center/path_edge_e.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "terrain/center/path_edge_n.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "terrain/center/path_corner_ne.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "terrain/center/path_corner_nw.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "terrain/center/path_edge_s.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "terrain/center/path_corner_se.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "terrain/center/path_corner_sw.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "terrain/center/path_edge_w.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Wrangler / OpenNext local preview secrets (gitignored via .dev.vars).
+# Copy values from .env.example — never commit real keys.
+NEXTJS_ENV=development
+RESEND_API_KEY=
+LEAD_FROM_EMAIL=
+LEAD_TO_EMAIL=Nicholaspatricksuyat@gmail.com
