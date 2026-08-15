@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { sendLeadEmail } from "@/game/server/sendLeadEmail";
 
 /**
- * Lead intake for Mordor "Start a Project".
+ * Lead intake for Ashen Reach "Start a Project".
  * Validates payload server-side. Email delivery uses server env only
  * (never expose API keys or provider errors to the browser).
  */

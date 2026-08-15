@@ -1,5 +1,5 @@
 /**
- * Server-only lead email delivery (Mordor → inquiry inbox).
+ * Server-only lead email delivery (Ashen Reach → inquiry inbox).
  * Secrets stay in env — never import this into client components.
  */
 

@@ -98,7 +98,7 @@ export class Atmosphere {
     };
 
     const specs: Spec[] = [
-      // —— Misty Mountains (most visible): cool bands around gate/stairs ——
+      // —— Mistveil Mountains (most visible): cool bands around gate/stairs ——
       // Prefer FRONT layer so mist isn't buried under dense pines.
       {
         x: mtn.col * TILE_SIZE + 8,
@@ -200,7 +200,7 @@ export class Atmosphere {
         driftY: 3,
         speed: 0.13,
       },
-      // —— Shire (very light warm haze) ——
+      // —— Hearth Hollow (very light warm haze) ——
       {
         x: (shire.col + 2) * TILE_SIZE,
         y: (shire.row - 1) * TILE_SIZE,
@@ -212,7 +212,7 @@ export class Atmosphere {
         driftY: 3,
         speed: 0.1,
       },
-      // —— Mordor (darker smoke/haze) ——
+      // —— Ashen Reach (darker smoke/haze) ——
       {
         x: (mordor.col - 1) * TILE_SIZE,
         y: mordor.row * TILE_SIZE + 8,
@@ -457,7 +457,7 @@ export class Atmosphere {
   ): void {
     if (!ATMOSPHERE.ENABLE_LIGHT_GLOWS) return;
 
-    // Extra soft pools that aren't tied 1:1 to prop.glow (Shire cozy, Mordor ember)
+    // Extra soft pools that aren't tied 1:1 to prop.glow (Hearth Hollow cozy, Ashen Reach ember)
     const shire = MAP_ANCHORS.shire;
     const mordor = MAP_ANCHORS.mordor;
     const mtn = MAP_ANCHORS.mountains;

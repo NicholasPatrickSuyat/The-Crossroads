@@ -23,7 +23,7 @@ export const PORTFOLIO = {
   },
 
   /**
-   * Inquiry inbox for Mordor leads (server-side only — never embed in client mail).
+   * Inquiry inbox for Ashen Reach leads (server-side only — never embed in client mail).
    * Override with LEAD_TO_EMAIL in production if needed.
    */
   inquiryEmail: "Nicholaspatricksuyat@gmail.com",

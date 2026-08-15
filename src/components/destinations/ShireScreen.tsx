@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * The Shire — About Me (warm / cozy themed overlay).
+ * Hearth Hollow — About Me (warm / cozy themed overlay).
  * Real profile photo, education, skills, LinkedIn / GitHub.
  */
 
@@ -32,7 +32,7 @@ export function ShireScreen({ onClose }: ShireScreenProps) {
     <div className="dest dest--shire" role="dialog" aria-labelledby="shire-title">
       <div className="dest__panel">
         <header className="dest__header">
-          <p className="dest__eyebrow">The Shire</p>
+          <p className="dest__eyebrow">Hearth Hollow</p>
           <h2 id="shire-title" className="dest__title">
             About Me
           </h2>

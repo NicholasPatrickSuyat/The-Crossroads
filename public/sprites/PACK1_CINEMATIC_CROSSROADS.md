@@ -96,7 +96,7 @@ MAP: 42 × 28 tiles = 672 × 448 px
 
 Hub / campfire:     (21, 16)
 Spawn (south of fire, facing north): (21, 20)
-Shire door:         (8, 15)     ~208 px → ~3.7 s @ 56 px/s
+Hearth Hollow door: (8, 15)     ~208 px → ~3.7 s @ 56 px/s
 Mountain threshold: (21, 5)     ~176 px → ~3.1 s (+ path bends → ~3.5–4.5 s)
 Fortress door:      (34, 15)    ~208 px → ~3.7 s
 ```
@@ -142,7 +142,7 @@ Send this section to the external asset workflow.
 
 1. **Perspective:** top-down 3/4 elevated adventure (match refs).
 2. **No text** baked into signboards / UI (Canvas labels later).
-3. **Original designs** — not LOTR / Frodo / Gandalf copies.
+3. **Original designs** — original fantasy traveler / landmarks (not franchise lookalikes).
 4. **Night-ready:** cool shadows + warm highlight bake where noted.
 5. **Ground skirt:** trees/landmarks include a small base of grass/rocks/flowers so they don’t float on tiles.
 6. **Tight trim:** transparent padding minimized; silhouette should nearly fill the canvas (avoid invisible bleed breaking collision math).
@@ -159,7 +159,7 @@ Generate these before any integration rewrite.
 
 | # | Filename | Size | Mode | Frames / layout | Perspective | Collision / base | Folder | Baked light | Canvas glow | Notes |
 |---|---|---|---|---|---|---|---|---|---|---|
-| A1 | `traveler_walk.png` | **256×192** | RGBA | **8×4** grid of **32×48** frames. Rows: down, up, left, right. Cols: idle + 3 walk. | 3/4 top-down | Hitbox ~12×8 at feet (offset ≈ 10,38 inside frame) | `public/sprites/player/` | Staff orb warm pixels **yes** | Soft staff glow optional later | Original wandering mage / traveler; blue hooded cloak OK; **not** Gandalf/Frodo |
+| A1 | `traveler_walk.png` | **256×192** | RGBA | **8×4** grid of **32×48** frames. Rows: down, up, left, right. Cols: idle + 3 walk. | 3/4 top-down | Hitbox ~12×8 at feet (offset ≈ 10,38 inside frame) | `public/sprites/player/` | Staff orb warm pixels **yes** | Soft staff glow optional later | Original wandering mage / traveler; blue hooded cloak OK |
 
 Minimum acceptable if full sheet is heavy: same 32×48 frame size with at least **up idle + up walk ×2** (back view for spawn). Prefer full sheet.
 
@@ -208,7 +208,7 @@ Minimum acceptable if full sheet is heavy: same 32×48 frame size with at least 
 
 | # | Filename | Size | Mode | Frames | Perspective | Collision / base | Folder | Baked light | Canvas glow | Notes |
 |---|---|---|---|---|---|---|---|---|---|---|
-| A28 | `shire_hillside_home.png` | **144×112** | RGBA | 1 | 3/4 | Lower mound/door band ~ full width × ~32–40 tall; door approach walkable | `public/sprites/landmarks/` | Round windows warm **yes** | Optional window glow later | Cozy grassy hillside home; round door; flowers/fence accents OK |
+| A28 | `shire_hillside_home.png` | **144×112** | RGBA | 1 | 3/4 | Lower mound/door band ~ full width × ~32–40 tall; door approach walkable | `public/sprites/landmarks/` | Round windows warm **yes** | Optional window glow later | Hillside Burrow landmark (Hearth Hollow); cozy grassy hillside home; round door; flowers/fence accents OK |
 | A29 | `mountain_gate.png` | **160×144** | RGBA | 1 | 3/4 | Stone mass solid; **open arch channel** walkable | same | Torch warm pixels **yes** | Optional torch glow | Ancient gate + stairs read; cliff integrated |
 | A30 | `dark_fortress.png` | **144×144** | RGBA | 1 | 3/4 | Wall/gate footprint; approach channel walkable | same | Brazier/lava crack warm **yes** | Optional fire glow | Jagged dark gate; volcanic base |
 
@@ -224,10 +224,10 @@ Minimum acceptable if full sheet is heavy: same 32×48 frame size with at least 
 | B2 | `lantern_tall.png` | **32×64** | RGBA | 1 | `hub/` | Foreground lantern |
 | B3 | `campfire.png` upgrade | **288×48** | RGBA | 6×48 | `hub/` | Smoother fire |
 | B4 | `ash_ground.png` | **16×16** | RGB | 1 | `terrain/forest/` | Fortress pocket floor |
-| B5 | `moss_ground.png` | **16×16** | RGB | 1 | `terrain/forest/` | Shire pocket floor |
+| B5 | `moss_ground.png` | **16×16** | RGB | 1 | `terrain/forest/` | Hearth Hollow pocket floor |
 | B6 | `cliff_face.png` | **64×64** | RGBA | 1 | `nature/` | Mountain backdrop mass |
 | B7 | `volcanic_rock.png` | **32×32** | RGBA | 1 | `nature/` | Fortress clutter |
-| B8 | `fence_wood.png` | **32×16** | RGBA | 1 | `nature/` | Shire garden |
+| B8 | `fence_wood.png` | **32×16** | RGBA | 1 | `nature/` | Hearth Hollow / Hillside Burrow garden |
 | B9 | `fern.png` | **24×24** | RGBA | 1 | `nature/` | Understory |
 | B10 | `traveler_idle.png` | **128×192** | RGBA | 4×4 @ 32×48 | `player/` | Breathing idle (optional if A1 has idle cols) |
 
@@ -255,7 +255,7 @@ Minimum acceptable if full sheet is heavy: same 32×48 frame size with at least 
 | dead_tree 48×80 | (18, 68, 12, 10) |
 | signpost 64×80 | (26, 66, 12, 14) |
 | lantern 24×48 | (8, 40, 8, 8) |
-| shire home 144×112 | lower band y≈72–112, leave door gap |
+| hillside home 144×112 | lower band y≈72–112, leave door gap |
 | mountain gate 160×144 | solid sides; open center ~32–40 wide |
 | dark fortress 144×144 | solid sides; open center ~32–40 wide |
 | traveler 32×48 | (10, 38, 12, 8) |

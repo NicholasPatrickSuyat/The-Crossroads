@@ -10,7 +10,8 @@ export function OpeningScreen({ onEnter, onDirectNav }: OpeningScreenProps) {
   return (
     <section className="screen screen--opening">
       <div className="screen__inner">
-        <h1 className="opening__title">Project X</h1>
+        <p className="opening__brand">Project X</p>
+        <h1 className="opening__title">The Crossroads</h1>
         <div className="opening__rule" aria-hidden="true" />
         <p className="opening__tagline">Build. Automate. Explore.</p>
         <button

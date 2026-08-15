@@ -3,13 +3,14 @@
 This app is prepared for **Cloudflare Workers** via `@opennextjs/cloudflare`.
 It is **not** a static-only site: `/api/leads` must remain a server route.
 
-## Do not deploy yet
+## Cloudflare Worker naming
 
-Scripts exist (`npm run preview`, `npm run deploy`) but deployment should wait until:
+- **Legacy live Worker (keep until new is verified):** `middle-earth-portfolio`
+  - https://middle-earth-portfolio.nicholaspatricksuyat.workers.dev
+- **Prepared next Worker name in `wrangler.jsonc`:** `the-crossroads`
+  - Target: https://the-crossroads.nicholaspatricksuyat.workers.dev
 
-1. Resend (or equivalent) credentials are ready
-2. Cloudflare secrets are configured
-3. You explicitly approve deploy
+Deploy the new name only after explicit approval. Copy secrets to the new Worker before cutting over. Do not delete the legacy Worker until the new URL is verified.
 
 ## Architecture
 
@@ -67,7 +68,7 @@ Optional: Workers Builds / Git integration — build command should run OpenNext
 
 Placeholders: `.env.example`, `.dev.vars.example`.
 
-## Mordor / leads hardening
+## Ashen Reach / leads hardening
 
 - Length limits + required fields + enum checks
 - Malformed email rejection

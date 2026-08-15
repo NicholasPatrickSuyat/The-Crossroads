@@ -7,7 +7,7 @@
  * Forest clearance rules (trunk/base only):
  *   - Roads & destination pockets stay walkable — trunks never sit on path tiles
  *     or inside landmark / hub / approach corridors.
- *   - South spawn + west Shire corridors stay visually open (don't-fill + path shoulder).
+ *   - South spawn + west Hearth Hollow corridors stay visually open (don't-fill + path shoulder).
  *   - SE bottom rim is thinned so it isn't a solid pine wall.
  *   - Canopies MAY overhang elsewhere to form forest walls.
  *   - Dense overlapping pines fill every other eligible grass cell.
@@ -172,9 +172,9 @@ function rectOverlapsLandmark(px: number, py: number, w: number, h: number): boo
 
 /**
  * Open pockets + approach corridors carved through forest:
- *   - Shire / Mountains / Mordor footprints + tiny approach
+ *   - Hearth Hollow / Mistveil Mountains / Ashen Reach footprints + tiny approach
  *   - Hub campfire / sign clearing
- *   - West corridor (hub → Shire) and south corridor (hub → spawn/bottom)
+ *   - West corridor (hub → Hearth Hollow) and south corridor (hub → spawn/bottom)
  *   - Dirt-path tiles plus a short shoulder so canopies don't seal the roads
  */
 function inDontFillZone(
@@ -182,11 +182,11 @@ function inDontFillZone(
   col: number,
   row: number,
 ): boolean {
-  // Shire home + tiny approach
+  // Hillside Burrow (Hearth Hollow) + tiny approach
   if (col >= 6 && col <= 14 && row >= 8 && row <= 15) return true;
-  // Misty Mountains gate / stairs + tiny approach
+  // Mistveil Mountains gate / stairs + tiny approach
   if (col >= 16 && col <= 25 && row >= 2 && row <= 10) return true;
-  // Mordor fortress + tiny approach
+  // Ashen Reach fortress + tiny approach
   if (col >= 27 && col <= 35 && row >= 8 && row <= 16) return true;
   // Central campfire / sign clearing
   if (col >= 18 && col <= 24 && row >= 11 && row <= 17) return true;
@@ -194,7 +194,7 @@ function inDontFillZone(
   if (col >= 16 && col <= 18 && row >= 17 && row <= 18) return true;
   // South spawn approach — vertical walkable strip to bottom edge
   if (col >= 19 && col <= 23 && row >= 15 && row < MAP_HEIGHT_TILES) return true;
-  // West Shire corridor — horizontal cut through the left tree wall
+  // West Hearth Hollow corridor — horizontal cut through the left tree wall
   if (col >= 10 && col <= 21 && row >= 12 && row <= 16) return true;
   // SE soft clear — thin the oversized bottom-right pine mass (not a solid wall)
   if (col >= 26 && row >= 20 && row < MAP_HEIGHT_TILES) return true;
@@ -273,11 +273,11 @@ export function buildCrossroadsProps(ground: Uint8Array): WorldProp[] {
   props.push(makeFlower(id("fl"), "center", hubX + 28, hubY + 14, "blue"));
   props.push(makeRock(id("rk"), "center", hubX + 16, hubY + 28));
 
-  // Shire — landmark + path sign on the approach (not floating roof text)
+  // Hearth Hollow — landmark + path sign on the approach (not floating roof text)
   const shireX = 6 * TILE_SIZE;
   const shireY = 8 * TILE_SIZE;
   props.push(makeShireHome(id("shire"), "shire", shireX, shireY));
-  props.push(makePathSign(id("sign"), "shire", shireX + 128, shireY + 68, "The Shire"));
+  props.push(makePathSign(id("sign"), "shire", shireX + 128, shireY + 68, "Hearth Hollow"));
   props.push(makeFlower(id("fl"), "shire", shireX + 24, shireY + 98, "orange"));
   props.push(makeFlower(id("fl"), "shire", shireX + 96, shireY + 94, "blue"));
   props.push(makeBush(id("bush"), "shire", shireX + 8, shireY + 100, "b"));
@@ -303,7 +303,7 @@ export function buildCrossroadsProps(ground: Uint8Array): WorldProp[] {
       gateY + 80,
     ),
   );
-  props.push(makePathSign(id("sign"), "mountains", hubX + 40, hubY - 96, "Misty Mountains"));
+  props.push(makePathSign(id("sign"), "mountains", hubX + 40, hubY - 96, "Mistveil Mountains"));
   props.push(makeRockCluster(id("rk"), "mountains", hubX - 70, hubY - 88));
   props.push(makeRockCluster(id("rk"), "mountains", hubX + 36, hubY - 84));
 
@@ -312,7 +312,7 @@ export function buildCrossroadsProps(ground: Uint8Array): WorldProp[] {
   const fortY = 8 * TILE_SIZE;
   props.push(makeDarkFortress(id("fort"), "mordor", fortX, fortY));
   props.push(makeFortressRightSolid(id("fort-r"), "mordor", fortX, fortY));
-  props.push(makePathSign(id("sign"), "mordor", fortX - 28, fortY + 96, "Mordor"));
+  props.push(makePathSign(id("sign"), "mordor", fortX - 28, fortY + 96, "Ashen Reach"));
   props.push(makeRockCluster(id("rk"), "mordor", fortX + 24, fortY + 120));
   props.push(makeBush(id("bush"), "mordor", fortX + 100, fortY + 124, "a"));
   props.push(makeFlower(id("fl"), "mordor", fortX + 56, fortY + 128, "orange"));
@@ -460,7 +460,7 @@ function fillNatureOutsideDontFill(
   }
   for (let row = 0; row < MAP_HEIGHT_TILES; row++) {
     const hl = hash2(2, row);
-    // Keep left rim, but don't seal the west Shire corridor rows
+    // Keep left rim, but don't seal the west Hearth Hollow corridor rows
     if (!(row >= 12 && row <= 16)) {
       tryPlacePine(
         props,

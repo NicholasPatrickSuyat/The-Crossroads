@@ -1,8 +1,17 @@
-# Project X — Interactive Portfolio
+# The Crossroads
 
-A Middle-earth inspired pixel RPG portfolio. Visitors explore the world instead of clicking a normal nav menu.
+The Crossroads is an interactive fantasy RPG-inspired developer portfolio built with Next.js, React, TypeScript, and a custom HTML Canvas game engine.
 
+**Brand:** Project X · The Crossroads  
 **Tagline:** Build. Automate. Explore.
+
+## Destinations
+
+| Place | Purpose |
+| --- | --- |
+| Hearth Hollow | About Me |
+| Mistveil Mountains | Projects |
+| Ashen Reach | Start a Project |
 
 ## Stack
 
@@ -26,7 +35,7 @@ Open [http://localhost:3001](http://localhost:3001), then use **WASD** / arrows 
 - `npm run typecheck` — TypeScript (`tsc --noEmit`)
 - `npm run build` — Next.js production build
 - `npm run preview` — OpenNext build + local Workers runtime preview
-- `npm run deploy` — OpenNext build + deploy to Cloudflare (**do not run until approved**)
+- `npm run deploy` — OpenNext build + deploy to Cloudflare (**only when approved**)
 
 See [docs/PRODUCTION.md](docs/PRODUCTION.md) for Cloudflare secrets, Resend, and launch checklist.
 

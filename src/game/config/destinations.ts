@@ -35,7 +35,7 @@ const mordor = MAP_ANCHORS.mordor;
 export const DESTINATIONS: readonly DestinationDef[] = [
   {
     id: "shire",
-    signTitle: "The Shire",
+    signTitle: "Hearth Hollow",
     promptAction: "About Me",
     screenTitle: "About Me",
     zoneX: (shire.col + 3) * TILE_SIZE + 8,
@@ -45,7 +45,7 @@ export const DESTINATIONS: readonly DestinationDef[] = [
   },
   {
     id: "mountains",
-    signTitle: "Misty Mountains",
+    signTitle: "Mistveil Mountains",
     promptAction: "View Projects",
     screenTitle: "Projects",
     zoneX: mtn.col * TILE_SIZE + 8,
@@ -55,7 +55,7 @@ export const DESTINATIONS: readonly DestinationDef[] = [
   },
   {
     id: "mordor",
-    signTitle: "Mordor",
+    signTitle: "Ashen Reach",
     promptAction: "Start a Project",
     screenTitle: "Start a Project",
     zoneX: (mordor.col - 2) * TILE_SIZE + 8,

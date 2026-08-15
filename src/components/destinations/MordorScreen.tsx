@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Mordor — Start a Project / Request a Service (lead generation).
+ * Ashen Reach — Start a Project / Request a Service (lead generation).
  * Submits to /api/leads (server-side). No secrets in the client.
  */
 
@@ -85,12 +85,12 @@ export function MordorScreen({ onClose }: MordorScreenProps) {
     <div
       className="dest dest--mordor"
       role="dialog"
-      aria-labelledby="mordor-title"
+      aria-labelledby="ashen-title"
     >
       <div className="dest__panel">
         <header className="dest__header">
-          <p className="dest__eyebrow">Mordor</p>
-          <h2 id="mordor-title" className="dest__title">
+          <p className="dest__eyebrow">Ashen Reach</p>
+          <h2 id="ashen-title" className="dest__title">
             Start a Project
           </h2>
           <button type="button" className="dest__close" onClick={onClose}>

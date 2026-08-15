@@ -45,10 +45,9 @@ export const CHARACTERS: readonly CharacterDef[] = [
   },
   {
     id: "cloaked-adventurer",
-    name: "Cloaked Adventurer",
+    name: "Wandering Traveler",
     epithet: "Boots worn thin; eyes on the far ridge.",
-    // Awaiting cloaked_adventurer.png — see the asset manifest in the
-    // Milestone 4 report. No placeholder art is rendered meanwhile.
+    // Awaiting traveler sheet — no placeholder art is rendered meanwhile.
     sheetKey: null,
     available: false,
   },

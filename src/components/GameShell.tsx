@@ -210,7 +210,8 @@ export function GameShell() {
           <header
             className={`game-brand${mobileGameplay ? " game-brand--overlay" : ""}`}
           >
-            <p className="game-brand__title">Project X</p>
+            <p className="game-brand__eyebrow">Project X</p>
+            <p className="game-brand__title">The Crossroads</p>
             {!mobileGameplay && (
               <p className="game-brand__tagline">Build. Automate. Explore.</p>
             )}

@@ -105,17 +105,33 @@ html.px-mobile-gameplay .game-stage {
   z-index: 7;
 }
 
+.game-brand__eyebrow {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-shadow: 0 1px 2px var(--ink-shadow);
+}
+
+.game-brand--overlay .game-brand__eyebrow {
+  font-size: 0.5rem;
+  letter-spacing: 0.18em;
+}
+
 .game-brand--overlay .game-brand__title {
+  margin-top: 2px;
   font-size: 0.62rem;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 .game-brand__title {
-  margin: 0;
-  letter-spacing: 0.35em;
+  margin: 4px 0 0;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--accent);
   text-shadow: 0 1px 2px var(--ink-shadow);
 }
@@ -699,12 +715,23 @@ html.px-mobile-gameplay .game-stage {
     var(--bg);
 }
 
+.opening__brand {
+  margin: 0 0 10px;
+  font-family: var(--font-mono);
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  letter-spacing: 0.32em;
+  text-indent: 0.32em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+}
+
 .opening__title {
   margin: 0;
-  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-size: clamp(1.8rem, 5.5vw, 3.1rem);
   font-weight: 700;
-  letter-spacing: 0.42em;
-  text-indent: 0.42em; /* optically re-centers letterspaced text */
+  letter-spacing: 0.28em;
+  text-indent: 0.28em; /* optically re-centers letterspaced text */
   text-transform: uppercase;
   color: var(--parchment);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
@@ -1160,7 +1187,7 @@ html.px-mobile-gameplay .game-stage {
   outline: none;
 }
 
-/* ---------- Shire layout (M9-ready slots) ---------- */
+/* ---------- Hearth Hollow layout (M9-ready slots) ---------- */
 
 .shire-layout {
   display: grid;

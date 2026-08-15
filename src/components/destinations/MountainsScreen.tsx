@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Misty Mountains — Projects archive (stone / adventure themed).
+ * Mistveil Mountains — Projects archive (stone / adventure themed).
  */
 
 import { useEffect } from "react";
@@ -33,7 +33,7 @@ export function MountainsScreen({ onClose }: MountainsScreenProps) {
     >
       <div className="dest__panel">
         <header className="dest__header">
-          <p className="dest__eyebrow">Misty Mountains</p>
+          <p className="dest__eyebrow">Mistveil Mountains</p>
           <h2 id="mtn-title" className="dest__title">
             Projects
           </h2>

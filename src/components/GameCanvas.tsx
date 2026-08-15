@@ -96,7 +96,7 @@ export function GameCanvas({
       <canvas
         ref={canvasRef}
         className="game-canvas"
-        aria-label="Project X interactive portfolio game world"
+        aria-label="The Crossroads interactive portfolio game world"
       />
       {!hideControlsHint && (
         <p className="controls-hint">WASD — Move · E — Interact</p>
